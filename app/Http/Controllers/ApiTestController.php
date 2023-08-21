@@ -21,9 +21,8 @@ class ApiTestController extends Controller
             'sortOrder' => 'asc',
         ]);
         var_dump($response);
-        // return Inertia::render('Profile/Edit', [
-        //     'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
-        //     'status' => session('status'),
-        // ]);
+        return Inertia::render('Test', [
+            'data'=> $response,
+        ]);
     }
 }

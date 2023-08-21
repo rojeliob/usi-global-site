@@ -35,6 +35,6 @@ use Inertia\Inertia;
 //     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
-Route::get('/', [ApiTestController::class, 'index'])->name('profile.edit');
+Route::get('/', [ApiTestController::class, 'index'])->name('test');
 
 require __DIR__.'/auth.php';
