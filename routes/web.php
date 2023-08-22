@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ApiTestController;
 use App\Http\Controllers\Zh170Controller;
-use App\Http\Controllers\Vf04Controller;
+use App\Http\Controllers\Fbl5nController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -39,7 +39,7 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/api-test', [ApiTestController::class, 'index'])->name('test');
 Route::get('/zh170', [Zh170Controller::class, 'index'])->name('zh170');
-Route::get('/vf04', [Vf04Controller::class, 'index'])->name('vf04');
+Route::get('/fbl5n', [Fbl5nController::class, 'index'])->name('fbl5n');
 
 
 

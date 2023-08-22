@@ -8,11 +8,11 @@ use Inertia\Inertia;
 use Inertia\Response;
 use Illuminate\Support\Facades\Http;
 
-class Zh170Controller extends Controller
+class Fbl5nController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Zh170', [
+        return Inertia::render('Fbl5n', [
         ]);
     }
 }
