@@ -19,15 +19,6 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): Response
     {
-        $response = Http::withHeaders([
-            'X-RapidAPI-Key' => 'SIGN-UP-FOR-KEY',
-            'X-RapidAPI-Host' => 'geography4.p.rapidapi.com'
-        ])->get('https://geography4.p.rapidapi.com/apis/geography/v1/country/gdp', [
-            'sortBy' => 'name',
-            'limit' => '10',
-            'sortOrder' => 'asc',
-        ]);
-        var_dump($response);
         return Inertia::render('Profile/Edit', [
             'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
             'status' => session('status'),
