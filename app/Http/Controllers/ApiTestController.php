@@ -21,8 +21,8 @@ class ApiTestController extends Controller
             'sortOrder' => 'asc',
         ]);
         var_dump($response);
-        return Inertia::render('Test', [
-            'data'=> $response,
-        ]);
+        // return Inertia::render('Test', [
+        //     'data'=> $response,
+        // ]);
     }
 }
