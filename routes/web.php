@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/api-test', [ApiTestController::class, 'index'])->name('test');
+Route::post('/api-test', [ApiTestController::class, 'index'])->name('test');
 Route::get('/zh170', [Zh170Controller::class, 'index'])->name('zh170');
 Route::get('/fbl5n', [Fbl5nController::class, 'index'])->name('fbl5n');
 

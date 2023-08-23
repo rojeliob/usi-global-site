@@ -22,7 +22,15 @@
               required
               autofocus
               autocomplete="account-from"
-            />to:
+            />to:<input
+              v-model="aacountTo"
+              id="account-to"
+              type="text"
+              class="mt-1 block w-full"
+              required
+              autofocus
+              autocomplete="account-to"
+            />
           </div>
         </div>
         <div class="flex md:w-2/3 gap-2">
@@ -36,45 +44,38 @@
     </div>
   </div>
 </template>
-    <script>
+  <script>
 // import TextInput from "@/Components/TextInput.vue";
+import { ref, onMounted } from "vue";
 // import { router } from "@inertiajs/vue3";
 // import VueDatePicker from "@vuepic/vue-datepicker";
-import { Inertia } from "@inertiajs/inertia";
 import "@vuepic/vue-datepicker/dist/main.css";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { router } from "@inertiajs/vue3";
 
 export default {
   setup() {
     const accountFrom = ref("");
+    const accountTo = ref("");
 
     const handleSubmit = () => {
-      const requestData = {
-        value1: accountFrom.value,
-      };
-      console.log("Input 1 value:", requestData);
-      console.log(window.location.origin);
-      //   router.post(window.location.origin + "/api-test", requestData);
-      // .then((response) => {
-      //   // Handle the response after the post request
-      // })
-      // .catch((error) => {
-      //   console.error("Error sending data:", error);
-      // });
-      //   this.$inertia.post("/api-test", { data: accountFrom.value });
+      console.log("Input 1 value:", accountFrom.value);
+      console.log("Input 2 value:", accountTo.value);
+      this.$inertia.post("/api-test", { data: accountFrom.value });
     };
 
     const resetInputs = () => {
       accountFrom.value = "";
+      accountTo.value = "";
     };
 
     return {
       accountFrom,
+      accountTo,
       handleSubmit,
       resetInputs,
     };
   },
 };
 </script>
-    
+  
