@@ -20,10 +20,10 @@ class ApiTestController extends Controller
         //     'limit' => '10',
         //     'sortOrder' => 'asc',
         // ]);
-        var_dump($request);
+        // var_dump($request);
         // var_dump($request->input('requestData'));
-        // return Inertia::render('Test', [
+        return Inertia::render('Test', [
             // 'data'=> $response,
-        // ]);
+        ]);
     }
 }
