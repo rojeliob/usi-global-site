@@ -214,19 +214,17 @@
     Pellentesque felis nulla, rhoncus viverra nunc vitae, viverra aliquam ante.
     Ut feugiat mattis tempor.
   </div> -->
-  <div class="p-5 !pl-[260px] text-center" id="content">
+  <div class="p-5 !pl-[260px]" id="content">
     <div class="py-12">
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
-        <h1
-          class="block w-full text-center text-gray-800 text-2xl font-bold mb-6"
-        >
+        <h1 class="block w-full text-gray-800 text-2xl font-bold mb-6">
           Customer line item display
         </h1>
         <form @submit.prevent="submit">
           <div class="flex gap-4 p-4 sm:p-8 bg-white shadow sm:rounded-lg">
             <div class="md:w-1/3 align-middle">
               <label for="exampleFormControlInput1" class="form-label"
-                >Customer account from - to</label
+                >Customer account</label
               >
             </div>
             <div class="flex md:w-2/3 gap-2">
@@ -239,9 +237,18 @@
                 autofocus
                 autocomplete="account-from"
               />to:
+              <input
+                v-model="accountTo"
+                id="account-to"
+                type="text"
+                class="mt-1 block w-full"
+                required
+                autofocus
+                autocomplete="account-from"
+              />
             </div>
           </div>
-          <div class="flex md:w-2/3 gap-2">
+          <div class="flex md:w-3/3 gap-2 justify-end py-4">
             <button
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
@@ -264,6 +271,7 @@ import { Head, Link, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
   accountFrom: "",
+  accountTo: "",
 });
 
 const submit = () => {

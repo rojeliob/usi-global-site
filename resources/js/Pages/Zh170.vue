@@ -261,12 +261,10 @@ const alertFn = () => {
       Pellentesque felis nulla, rhoncus viverra nunc vitae, viverra aliquam ante.
       Ut feugiat mattis tempor.
     </div> -->
-  <div class="p-5 !pl-[260px] text-center" id="content">
+  <div class="p-5 !pl-[260px]" id="content">
     <div class="py-12">
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
-        <h1
-          class="block w-full text-center text-gray-800 text-2xl font-bold mb-6"
-        >
+        <h1 class="block w-full text-gray-800 text-2xl font-bold mb-6">
           Billing record & AR status report!
         </h1>
         <form @submit.prevent="submit">
@@ -285,7 +283,7 @@ const alertFn = () => {
               />
             </div>
           </div>
-          <div class="flex md:w-2/3 gap-2">
+          <div class="flex md:w-3/3 gap-2 justify-end py-4">
             <button
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
