@@ -1,81 +1,132 @@
 <template>
-  <div class="py-12">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
-      <h1
-        class="block w-full text-center text-gray-800 text-2xl font-bold mb-6"
-      >
-        Customer line item display
-      </h1>
-      <form @submit.prevent="handleSubmit">
-        <div class="flex gap-4 p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-          <div class="md:w-1/3 align-middle">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Customer account from - to</label
-            >
-          </div>
-          <div class="flex md:w-2/3 gap-2">
-            <input
-              v-model="accountFrom"
-              id="account-from"
-              type="text"
-              class="mt-1 block w-full"
-              required
-              autofocus
-              autocomplete="account-from"
-            />to:<input
-              v-model="aacountTo"
-              id="account-to"
-              type="text"
-              class="mt-1 block w-full"
-              required
-              autofocus
-              autocomplete="account-to"
-            />
-          </div>
-        </div>
-        <div class="flex md:w-2/3 gap-2">
-          <button
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Button
-          </button>
-        </div>
-      </form>
+  <!-- Navegación Superior -->
+  <nav class="bg-blue-500 p-4 flex items-center justify-between">
+    <div>
+      <h1 class="text-white text-xl font-semibold">SALUD 360</h1>
     </div>
-  </div>
+    <div class="flex items-center space-x-4">
+      <span class="text-white">Bienvenido</span>
+      <i class="fas fa-user-circle text-white text-2xl"></i>
+    </div>
+  </nav>
+
+  <!-- Navegación lateral -->
+  <aside class="bg-gray-800 text-white w-64 min-h-screen p-4">
+    <nav>
+      <ul class="space-y-2">
+        <li class="opcion-con-desplegable">
+          <div class="flex items-center justify-between p-2 hover:bg-gray-700">
+            <div class="flex items-center">
+              <i class="fas fa-calendar-alt mr-2"></i>
+              <span>Agenda</span>
+            </div>
+            <i class="fas fa-chevron-down text-xs"></i>
+          </div>
+          <ul class="desplegable ml-4 hidden">
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Gestion de citas
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Polizas
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="opcion-con-desplegable">
+          <div class="flex items-center justify-between p-2 hover:bg-gray-700">
+            <div class="flex items-center">
+              <i class="fas fa-money-bill-wave mr-2"></i>
+              <span>Contabilidad</span>
+            </div>
+            <i class="fas fa-chevron-down text-xs"></i>
+          </div>
+          <ul class="desplegable ml-4 hidden">
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Tratamientos
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Gastos
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Facturas
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="opcion-con-desplegable">
+          <div class="flex items-center justify-between p-2 hover:bg-gray-700">
+            <div class="flex items-center">
+              <i class="fas fa-chart-bar mr-2"></i>
+              <span>Informes</span>
+            </div>
+            <i class="fas fa-chevron-down text-xs"></i>
+          </div>
+          <ul class="desplegable ml-4 hidden">
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Presupuestos
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Informe médico
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="opcion-con-desplegable">
+          <div class="flex items-center justify-between p-2 hover:bg-gray-700">
+            <div class="flex items-center">
+              <i class="fas fa-file-alt mr-2"></i>
+              <span>Documentación</span>
+            </div>
+            <i class="fas fa-chevron-down text-xs"></i>
+          </div>
+          <ul class="desplegable ml-4 hidden">
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Firmas pendientes
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Documentos
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Agrega más enlaces para la navegación lateral -->
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="container mx-auto p-4">
+    <!-- Aquí puedes agregar el contenido principal de tu página CRM -->
+    <h1 class="text-2xl font-bold mb-4">¡Bienvenido al CRM de Mi Empresa!</h1>
+    <p>
+      En esta sección encontrarás todo lo que necesitas para administrar tus
+      clientes y ventas de manera eficiente.
+    </p>
+  </main>
 </template>
-  <script>
-// import TextInput from "@/Components/TextInput.vue";
-import { ref, onMounted } from "vue";
-// import { router } from "@inertiajs/vue3";
-// import VueDatePicker from "@vuepic/vue-datepicker";
-import "@vuepic/vue-datepicker/dist/main.css";
-import { ref, onMounted } from "vue";
-import { router } from "@inertiajs/vue3";
 
-export default {
-  setup() {
-    const accountFrom = ref("");
-    const accountTo = ref("");
-
-    const handleSubmit = () => {
-      console.log("Input 1 value:", accountFrom.value);
-      console.log("Input 2 value:", accountTo.value);
-      this.$inertia.post("/api-test", { data: accountFrom.value });
-    };
-
-    const resetInputs = () => {
-      accountFrom.value = "";
-      accountTo.value = "";
-    };
-
-    return {
-      accountFrom,
-      accountTo,
-      handleSubmit,
-      resetInputs,
-    };
-  },
-};
+<script setup>
 </script>
-  

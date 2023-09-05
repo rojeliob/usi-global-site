@@ -42,7 +42,9 @@ Route::get('/zh170', [Zh170Controller::class, 'index'])->name('zh170');
 Route::get('/fbl5n', [Fbl5nController::class, 'index'])->name('fbl5n');
 Route::get('/api-test', [ApiTestController::class, 'index'])->name('api-test');
 
-
+Route::get('/test2',function(){
+    return Inertia::render('Test2');
+});
 
 
 require __DIR__.'/auth.php';

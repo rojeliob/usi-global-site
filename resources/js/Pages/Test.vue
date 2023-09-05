@@ -271,13 +271,13 @@ const alertFn = () => {
           <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
               <div class="overflow-hidden">
-                <div class="flex flex-col">
-                  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="flex flex-col overflow-x-auto">
+                  <div class="sm:-mx-6 lg:-mx-8">
                     <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                       <div class="overflow-hidden">
                         <table class="min-w-full text-left text-sm font-light">
                           <thead
-                            class="border-b font-medium dark:border-neutral-500"
+                            class="border-b bg-neutral-800 font-medium text-white dark:border-neutral-500 dark:bg-neutral-900"
                           >
                             <tr>
                               <th scope="col" class="px-6 py-4">#</th>
@@ -297,7 +297,6 @@ const alertFn = () => {
                               </td>
                               <td class="whitespace-nowrap px-6 py-4">OR</td>
                               <td class="whitespace-nowrap px-6 py-4">ZAN</td>
-                              <td class="whitespace-nowrap px-6 py-4">91108</td>
                             </tr>
                             <tr
                               class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600"
@@ -306,6 +305,78 @@ const alertFn = () => {
                                 class="whitespace-nowrap px-6 py-4 font-medium"
                               >
                                 2
+                              </td>
+                              <td class="whitespace-nowrap px-6 py-4">OR</td>
+                              <td class="whitespace-nowrap px-6 py-4">ZAN</td>
+                              <td class="whitespace-nowrap px-6 py-4">91108</td>
+                            </tr>
+                            <tr
+                              class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600"
+                            >
+                              <td
+                                class="whitespace-nowrap px-6 py-4 font-medium"
+                              >
+                                3
+                              </td>
+                              <td class="whitespace-nowrap px-6 py-4">OR</td>
+                              <td class="whitespace-nowrap px-6 py-4">ZAN</td>
+                              <td class="whitespace-nowrap px-6 py-4">91108</td>
+                            </tr>
+                            <tr
+                              class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600"
+                            >
+                              <td
+                                class="whitespace-nowrap px-6 py-4 font-medium"
+                              >
+                                3
+                              </td>
+                              <td class="whitespace-nowrap px-6 py-4">OR</td>
+                              <td class="whitespace-nowrap px-6 py-4">ZAN</td>
+                              <td class="whitespace-nowrap px-6 py-4">91108</td>
+                            </tr>
+                            <tr
+                              class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600"
+                            >
+                              <td
+                                class="whitespace-nowrap px-6 py-4 font-medium"
+                              >
+                                3
+                              </td>
+                              <td class="whitespace-nowrap px-6 py-4">OR</td>
+                              <td class="whitespace-nowrap px-6 py-4">ZAN</td>
+                              <td class="whitespace-nowrap px-6 py-4">91108</td>
+                            </tr>
+                            <tr
+                              class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600"
+                            >
+                              <td
+                                class="whitespace-nowrap px-6 py-4 font-medium"
+                              >
+                                3
+                              </td>
+                              <td class="whitespace-nowrap px-6 py-4">OR</td>
+                              <td class="whitespace-nowrap px-6 py-4">ZAN</td>
+                              <td class="whitespace-nowrap px-6 py-4">91108</td>
+                            </tr>
+                            <tr
+                              class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600"
+                            >
+                              <td
+                                class="whitespace-nowrap px-6 py-4 font-medium"
+                              >
+                                3
+                              </td>
+                              <td class="whitespace-nowrap px-6 py-4">OR</td>
+                              <td class="whitespace-nowrap px-6 py-4">ZAN</td>
+                              <td class="whitespace-nowrap px-6 py-4">91108</td>
+                            </tr>
+                            <tr
+                              class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600"
+                            >
+                              <td
+                                class="whitespace-nowrap px-6 py-4 font-medium"
+                              >
+                                3
                               </td>
                               <td class="whitespace-nowrap px-6 py-4">OR</td>
                               <td class="whitespace-nowrap px-6 py-4">ZAN</td>
