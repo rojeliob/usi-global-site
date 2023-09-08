@@ -145,8 +145,7 @@
           <span>Upload xls</span>
         </a>
       </li>
-      <!-- li with sub level
-        <li class="relative">
+      <!-- <li class="relative">
           <a
             class="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-slate-50 hover:text-inherit hover:outline-none focus:bg-slate-50 focus:text-inherit focus:outline-none active:bg-slate-50 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
             data-te-sidenav-link-ref
@@ -309,27 +308,19 @@
           <div class="flex gap-4 p-4 sm:p-8 bg-white shadow sm:rounded-lg">
             <div class="md:w-1/3 align-middle">
               <label for="exampleFormControlInput1" class="form-label"
-                >Customer account</label
+                >XLS file</label
               >
             </div>
             <div class="flex md:w-2/3 gap-2">
+              <label
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                for="file_input"
+                >XLS file</label
+              >
               <input
-                v-model="accountFrom"
-                id="account-from"
-                type="text"
-                class="mt-1 block w-full"
-                required
-                autofocus
-                autocomplete="account-from"
-              />to:
-              <input
-                v-model="accountTo"
-                id="account-to"
-                type="text"
-                class="mt-1 block w-full"
-                required
-                autofocus
-                autocomplete="account-from"
+                class="block w-full mb-5 text-xs text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                id="small_size"
+                type="file"
               />
             </div>
           </div>
@@ -337,7 +328,7 @@
             <button
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
-              Button
+              Subir
             </button>
           </div>
         </form>

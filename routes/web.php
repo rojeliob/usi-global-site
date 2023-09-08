@@ -19,14 +19,14 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -44,6 +44,13 @@ Route::get('/api-test', [ApiTestController::class, 'index'])->name('api-test');
 
 Route::get('/test2',function(){
     return Inertia::render('Test2');
+});
+Route::get('/upload',function(){
+    return Inertia::render('XlsUpload');
+});
+
+Route::get('/',function(){
+    return Inertia::render('Zh170');
 });
 
 
