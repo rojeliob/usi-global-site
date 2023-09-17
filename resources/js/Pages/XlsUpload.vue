@@ -304,7 +304,7 @@
         <h1 class="block w-full text-gray-800 text-2xl font-bold mb-6">
           Customer line item display
         </h1>
-        <form @submit.prevent="submit">
+        <form @submit.prevent="upload">
           <div class="flex gap-4 p-4 sm:p-8 bg-white shadow sm:rounded-lg">
             <div class="md:w-1/3 align-middle">
               <label for="exampleFormControlInput1" class="form-label"
@@ -321,6 +321,9 @@
                 class="block w-full mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                 id="default_size"
                 type="file"
+                ref="fileInput"
+                @change="handleFileChange"
+                accept=".xls"
               />
             </div>
           </div>
@@ -336,21 +339,45 @@
     </div>
   </div>
 </template>
-<script setup>
-import GuestLayout from "@/Layouts/GuestLayout.vue";
-import InputError from "@/Components/InputError.vue";
-import InputLabel from "@/Components/InputLabel.vue";
-import PrimaryButton from "@/Components/PrimaryButton.vue";
-import TextInput from "@/Components/TextInput.vue";
-import { reactive } from "vue";
-import { Head, Link, useForm } from "@inertiajs/vue3";
+<script>
+// import GuestLayout from "@/Layouts/GuestLayout.vue";
+// import InputError from "@/Components/InputError.vue";
+// import InputLabel from "@/Components/InputLabel.vue";
+// import PrimaryButton from "@/Components/PrimaryButton.vue";
+// import TextInput from "@/Components/TextInput.vue";
+// import { reactive } from "vue";
+// import { Head, Link, useForm } from "@inertiajs/vue3";
 
-const form = useForm({
-  accountFrom: "",
-  accountTo: "",
-});
+//   const form = useForm({
+//     accountFrom: "",
+//     accountTo: "",
+//   });
 
-const submit = () => {
-  console.log(form.post(route("api-test"), {}));
+// const submit = () => {
+//   console.log(form.post(route("api-test"), {}));
+// };
+export default {
+  methods: {
+    async upload() {
+      const fileInput = this.$refs.fileInput;
+      const file = fileInput.files[0];
+
+      if (!file) {
+        alert("Please select a file to upload.");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        await this.$inertia.post("upload-file", formData);
+        alert("File uploaded successfully.");
+      } catch (error) {
+        alert("File upload failed.");
+        console.error(error);
+      }
+    },
+  },
 };
 </script>
